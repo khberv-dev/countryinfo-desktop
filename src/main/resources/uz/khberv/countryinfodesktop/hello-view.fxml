@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="uz.khberv.countryinfodesktop.controller.AppController"
+          stylesheets="@./css/main.css, @./css/country-list.css">
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="40"/>
+        <ColumnConstraints percentWidth="60"/>
+    </columnConstraints>
+
+    <VBox
+            GridPane.columnIndex="0"
+            styleClass="root-frame">
+
+        <AnchorPane prefHeight="50">
+            <TextField fx:id="inpSearch"
+                       AnchorPane.leftAnchor="5"
+                       AnchorPane.rightAnchor="5"
+                       AnchorPane.topAnchor="10"
+                       AnchorPane.bottomAnchor="10"
+                       styleClass="search-box"/>
+
+            <FontIcon iconLiteral="anto-search"
+                      iconSize="24"
+                      AnchorPane.rightAnchor="16"
+                      AnchorPane.topAnchor="16"/>
+        </AnchorPane>
+
+        <ListView fx:id="countryListView"
+                  prefHeight="600"/>
+    </VBox>
+
+    <VBox fx:id="countryInfoBox"
+          GridPane.columnIndex="1"
+          styleClass="root-frame"
+          style="-fx-padding: 20"
+          visible="false">
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT">
+            <ImageView fitWidth="70"
+                       fitHeight="40"
+                       fx:id="countryFlag">
+                <Image url="@./un.png"/>
+            </ImageView>
+            <VBox>
+                <HBox>
+                    <Label text="Name: "
+                           style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+                    <Label fx:id="countryName"
+                           style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                           text="UN"/>
+                </HBox>
+                <HBox>
+                    <Label text="Native name: "
+                           style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+                    <Label fx:id="countryNativeName"
+                           style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                           text="United Nations"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <HBox>
+            <Label text="Continent: "
+                   style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+            <Label fx:id="countryContinent"
+                   style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                   text="Unknown"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Capital: "
+                   style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+            <Label fx:id="countryCapital"
+                   style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                   text="Unknown"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Population: "
+                   style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+            <Label fx:id="countryPopulation"
+                   style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                   text="8 000 000 000"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Area: "
+                   style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+            <Label fx:id="countryArea"
+                   style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                   text="0 sq.km"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Currency: "
+                   style="-fx-font-size: 15; -fx-text-fill: #000000"/>
+            <Label fx:id="countryCurrency"
+                   style="-fx-font-size: 15; -fx-text-fill: #6c6c6c"
+                   text="USD [United States Dollar, $]"/>
+        </HBox>
+    </VBox>
+
+</GridPane>

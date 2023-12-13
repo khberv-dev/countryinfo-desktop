@@ -1,0 +1,22 @@
+ListView .list-cell {
+    -fx-pref-height: 50;
+    -fx-background-color: #f1f1f1;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-border-color: #b6b6b6;
+}
+
+ListView .list-cell:selected {
+    -fx-background-color: #a9d6fd;
+    -fx-pref-height: 50;
+}
+
+ListView .list-cell .lbl-country-name {
+    -fx-font-size: 13;
+    -fx-text-fill: #505050;
+}
+
+ListView .list-cell .lbl-country-native-name {
+    -fx-font-size: 10;
+    -fx-text-fill: #818181;
+    -fx-font-family: Arial;
+}

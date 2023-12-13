@@ -1,0 +1,15 @@
+TextField {
+    -fx-font-size: 16;
+    -fx-background-color: #00000000;
+}
+
+.root-frame {
+    -fx-pref-height: 600;
+}
+
+.search-box {
+    -fx-border-width: 1;
+    -fx-border-color: #7575e5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
